@@ -1,1 +1,1 @@
-let () = Printf.printf "Hello, %s\n" "World!"
+let () = Printf.printf "Hello, %s\n" "World"
