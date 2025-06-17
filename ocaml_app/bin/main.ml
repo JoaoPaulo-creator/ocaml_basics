@@ -1,12 +1,11 @@
-(* função recursiva *)
-let rec factorial n = 
-        match n with
-        | 0 -> 1
-        | n -> n * factorial(n - 1)
-
 let () = 
-        print_endline (string_of_int (factorial(5)));
+        print_endline (string_of_int (Factorial.factorial(5)));
         print_endline (string_of_int (Helper.add 3 4));
+        let list = [|2; 4; 6|] in
+        let mapped = Map_lists.map_lists list in
+        let mapped_str = "[" ^ String.concat ", " (List.map string_of_int mapped ) ^ "]" in
+        Printf.printf "result of a mapped list: %s\n" mapped_str;
+
         let nums = [|2; 7; 11; 15|] in
         let target = 26 in
         match Two_sum.two_sum nums target with
