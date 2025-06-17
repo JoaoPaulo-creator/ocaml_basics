@@ -1,4 +1,11 @@
 let () = 
+
+        Printf.printf "reading file in ocaml\n";
+        let filename = "input.txt" in
+        let content = Read_file.read_file filename in
+        print_endline content;
+
+
         print_endline (string_of_int (Factorial.factorial(5)));
         print_endline (string_of_int (Helper.add 3 4));
         let list = [|2; 4; 6|] in
@@ -10,4 +17,6 @@ let () =
         let target = 26 in
         match Two_sum.two_sum nums target with
         | Some (i, j )-> Printf.printf "Indices: %d, %d\n" i j
-        | None -> print_endline "No solution"
+        | None -> print_endline "No solution";
+
+
