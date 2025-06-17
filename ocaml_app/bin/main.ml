@@ -5,6 +5,10 @@ let () =
         let content = Read_file.read_file filename in
         print_endline content;
 
+        let filename = "multiline_input.txt" in
+        let content = Read_file.read_multiple_lines filename in
+        List.iter (fun line -> Printf.printf "Line: %s\n" line) content;
+
 
         print_endline (string_of_int (Factorial.factorial(5)));
         print_endline (string_of_int (Helper.add 3 4));
